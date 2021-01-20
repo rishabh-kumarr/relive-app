@@ -49,12 +49,6 @@ export default makeStyles((theme) => ({
 		toolbar: {
 			justifyContent: 'center',
 		},
-		image: {
-			marginRight: 5,
-		},
-		heading: {
-			fontSize: 36,
-		},
 		profile: {
 			justifyContent: 'center',
 		},

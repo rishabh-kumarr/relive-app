@@ -19,10 +19,10 @@ app.use('/posts', postRoutes)
 app.use('/user', userRoutes)
 
 app.get('/', (req, res) => {
-	res.send('Welcome to Relive API!!')
+	res.send('Welcome to Relive-App API!!')
 })
 
-const PORT = process.env.PORT || 5000
+var PORT = process.env.PORT || 5000
 const url = process.env.MONGO_URL
 
 mongoose
