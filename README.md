@@ -1,5 +1,5 @@
 # Relive-App
 
-## Implemented using MERN Stack
+## A Social Media App to relive the moments worth remembering!
 
 ### Made by Rishabh
