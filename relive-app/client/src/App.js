@@ -12,7 +12,7 @@ const App = () => {
 	const classes = useStyles()
 	return (
 		<BrowserRouter>
-			<Container maxwidth="lg" className={classes.app}>
+			<Container className={classes.app}>
 				<Navbar />
 				<Switch>
 					<Route path="/" exact component={Home} />

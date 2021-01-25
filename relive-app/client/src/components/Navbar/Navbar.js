@@ -6,6 +6,8 @@ import relive from '../../images/relive.png'
 import useStyles from './styles'
 import { useDispatch } from 'react-redux'
 
+import * as actionType from '../../constants/actionTypes'
+
 import decode from 'jwt-decode'
 
 const Navbar = () => {
@@ -16,9 +18,9 @@ const Navbar = () => {
 	const location = useLocation()
 
 	const logout = () => {
-		dispatch({ type: 'LOGOUT' })
+		dispatch({ type: actionType.LOGOUT })
 
-		history.push('/')
+		history.push('/auth')
 		setUser(null)
 	}
 
@@ -27,7 +29,8 @@ const Navbar = () => {
 
 		if (token) {
 			const decodedToken = decode(token)
-			if (decodedToken.exp * 1000 < new Date().getTime()) logout()
+			if (decodedToken.exp * 1000 < new Date().getTime())
+				logout()
 		}
 		setUser(JSON.parse(localStorage.getItem('profile')))
 	}, [location])
@@ -47,7 +50,7 @@ const Navbar = () => {
 				</Typography>
 			</div>
 			<Toolbar className={classes.toolbar}>
-				{user ? (
+				{user?.result ? (
 					<div className={classes.profile}>
 						<Avatar
 							className={classes.purple}

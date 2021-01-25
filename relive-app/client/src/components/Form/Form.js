@@ -65,6 +65,7 @@ const Form = ({ currentId, setCurrentId }) => {
 				onSubmit={handleSubmit}
 			>
 				<Typography variant="h6">
+					{' '}
 					{currentId ? `Editing "${posts.title}"` : 'Relive the moments'}
 				</Typography>
 
