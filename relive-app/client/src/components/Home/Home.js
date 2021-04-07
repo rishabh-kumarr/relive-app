@@ -28,7 +28,7 @@ const Home = () => {
 					className={classes.mainContainer}
 					spacing={3}
 				>
-					<Grid item xs={12} sm={12} md={7}>
+					<Grid item xs={12} sm={12} md={8}>
 						<Posts setCurrentId={setCurrentId} />
 					</Grid>
 					<Grid item xs={12} sm={12} md={4}>
